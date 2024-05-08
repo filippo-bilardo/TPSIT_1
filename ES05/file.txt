@@ -1,0 +1,3 @@
+MSG,Ciao come stai
+MSG,Ciao come stai
+MSG,Ciao come stai
