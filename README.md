@@ -8,7 +8,7 @@ Appunti ed esempi per corso TPSIT1 (classi terze)
 
 ---
 ## Corsi collegati
-  - [TPSIT_1](https://github.com/filippo-bilardo/TPSIT_1)
-  - [TPSIT_2](https://github.com/filippo-bilardo/TPSIT_2)
-  - [TPSIT_3](https://github.com/filippo-bilardo/TPSIT_3)
+- [TPSIT_1](https://github.com/filippo-bilardo/TPSIT_1)
+- [TPSIT_2](https://github.com/filippo-bilardo/TPSIT_2)
+- [TPSIT_3](https://github.com/filippo-bilardo/TPSIT_3)
   
