@@ -1,7 +1,7 @@
 ## B-Il_Sistema_Operativo
 
-Ecco un possibile indice per il libro "Guida Linux Essential":
-
+- [Il ciclo while](<Il ciclo while.md>)
+- 
 **Introduzione**
 - Benvenuti nel mondo di Linux
 - Obiettivi del libro
@@ -9,7 +9,6 @@ Ecco un possibile indice per il libro "Guida Linux Essential":
 - Convenzioni utilizzate
 
 **Parte 1: Fondamenti di Linux**
-
 1. **Panoramica su Linux**
    - Storia e filosofia di Linux
    - Differenze tra distribuzioni
