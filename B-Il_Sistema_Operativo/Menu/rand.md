@@ -1,3 +1,40 @@
+## Numeri random in bash
+Generare numeri casuali in Bash può essere fatto utilizzando la funzione interna `$RANDOM`, che restituisce un numero casuale compreso tra 0 e 32767. Ecco alcuni esempi di come puoi utilizzare `$RANDOM` per generare numeri casuali:
+
+### Esempio 1: Generare un numero casuale
+
+```bash
+#!/bin/bash
+
+# Genera un numero casuale
+numero_casuale=$RANDOM
+echo "Numero casuale: $numero_casuale"
+```
+
+### Esempio 2: Generare un numero casuale in un intervallo specifico
+
+Se vuoi generare un numero casuale in un intervallo specifico, ad esempio tra 1 e 100, puoi fare così:
+
+```bash
+#!/bin/bash
+
+# Genera un numero casuale tra 1 e 100
+numero_casuale=$((RANDOM % 100 + 1))
+echo "Numero casuale tra 1 e 100: $numero_casuale"
+```
+
+### Spiegazione
+
+- `$RANDOM`: Genera un numero casuale tra 0 e 32767.
+- `$((RANDOM % 100 + 1))`: Utilizza l'operatore modulo `%` per ottenere un numero casuale tra 0 e 99, e poi aggiunge 1 per ottenere un numero tra 1 e 100.
+
+### Note
+
+- `$RANDOM` è una variabile speciale in Bash che genera un nuovo numero casuale ogni volta che viene richiamata.
+- Puoi utilizzare l'aritmetica di Bash per manipolare il numero generato e adattarlo alle tue esigenze.
+
+---
+
 Ecco uno script Bash che genera un numero casuale tra 1 e 10, quindi chiede all'utente di indovinarlo utilizzando un ciclo `while`. L'utente continua a inserire numeri fino a quando non indovina il numero corretto.
 
 ```bash
