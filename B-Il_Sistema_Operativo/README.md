@@ -4,7 +4,7 @@
 - [Il ciclo while](<Il ciclo while.md>)
 - [Dichiarazione e utilizzo delle variabili](<Dichiarazione e utilizzo delle variabili.md>)
 - [Variabili d'ambiente](<Variabili d'ambiente.md>)
-- [Argomenti da riga di comando](<Argomenti da riga di comando.md>)
+- [Parametri posizionali e argomenti da riga di comando](<Parametri posizionali e argomenti da riga di comando.md>)
 - [Espansione aritmetica](<Espansione aritmetica.md>)
 
 9. **Shell Scripting**
