@@ -5,7 +5,7 @@
 - [Dichiarazione e utilizzo delle variabili](<Dichiarazione e utilizzo delle variabili.md>)
 - [Variabili d'ambiente](<Variabili d'ambiente.md>)
 - [Parametri posizionali e argomenti da riga di comando](<Parametri posizionali e argomenti da riga di comando.md>)
-- [Espansione aritmetica](<Espansione aritmetica.md>)
+- [Espansione aritmetica](<Espansione aritmetica2.md>)
 
 9. **Shell Scripting**
    - Introduzione al linguaggio di scripting
