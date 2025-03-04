@@ -7,6 +7,10 @@
 - [Parametri posizionali e argomenti da riga di comando](<Parametri posizionali e argomenti da riga di comando.md>)
 - [Espansione aritmetica](<Espansione aritmetica2.md>)
 
+- [Shell_Windows](<Shell_Windows/README.md>)
+
+---
+
 9. **Shell Scripting**
    - Introduzione al linguaggio di scripting
    - Funzioni e parametri
