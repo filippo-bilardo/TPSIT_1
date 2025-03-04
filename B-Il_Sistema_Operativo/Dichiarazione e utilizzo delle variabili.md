@@ -95,7 +95,7 @@ I numeri in Bash sono anch'essi memorizzati come stringhe, ma possono essere uti
 #!/bin/bash
 
 età=42
-anno_nascita=$((2023 - $età))
+anno_nascita=$((2025 - $età))
 echo "Se hai $età anni, sei nato presumibilmente nel $anno_nascita"
 ```
 
@@ -177,6 +177,108 @@ line 6: PI: readonly variable
 
 È una buona pratica dichiarare come `readonly` le variabili che non dovrebbero cambiare durante l'esecuzione dello script, e per convenzione i loro nomi sono spesso scritti in maiuscolo.
 
+---
+
+## Espansione indiretta delle variabili
+
+Il punto esclamativo `!` all'interno delle parentesi graffe `{}` in Bash è utilizzato per l'espansione indiretta delle variabili. Questo meccanismo consente di ottenere il valore di una variabile il cui nome è memorizzato in un'altra variabile.
+
+L'espansione indiretta è utile quando hai bisogno di accedere dinamicamente a variabili il cui nome è determinato a runtime.
+
+### Esempio
+
+```bash
+#!/bin/bash
+
+# Dichiarazione di variabili
+nome_variabile="saluto"
+saluto="Ciao, mondo!"
+
+# Utilizzo dell'espansione indiretta per ottenere il valore di 'saluto'
+valore_indiretto=${!nome_variabile}
+echo "Valore indiretto: $valore_indiretto"
+```
+
+**Output:**
+```
+Valore indiretto: Ciao, mondo!
+```
+
+### Spiegazione
+
+- `${!nome_variabile}`: Il punto esclamativo `!` indica a Bash di eseguire un'espansione indiretta. Invece di restituire il valore di `nome_variabile`, Bash restituisce il valore della variabile il cui nome è memorizzato in `nome_variabile`.
+- In questo caso, `nome_variabile` contiene la stringa `"saluto"`, quindi `${!nome_variabile}` restituisce il valore della variabile `saluto`, che è `"Ciao, mondo!"`.
+
+### Utilizzo pratico
+
+L'espansione indiretta è utile in scenari in cui devi lavorare con variabili dinamiche, come quando leggi nomi di variabili da un file o da un input utente e devi accedere ai loro valori.
+
+### Note
+
+- L'espansione indiretta richiede che la variabile di riferimento (`saluto` nell'esempio) sia già definita nel contesto in cui viene utilizzata.
+- È una funzionalità avanzata e può essere utile in script complessi dove la flessibilità nell'accesso alle variabili è necessaria.
+
+---
+
+## Espansione con valori predefiniti
+
+L'espansione con valori predefiniti in Bash ti permette di specificare un valore di fallback che verrà utilizzato se una variabile non è impostata o è vuota. Questo è utile per evitare errori e garantire che una variabile abbia sempre un valore valido.
+
+### Sintassi di base
+
+La sintassi per l'espansione con valori predefiniti è la seguente:
+
+```bash
+${variabile:-valore_predefinito}
+```
+
+### Esempio 1: Variabile non impostata
+
+```bash
+#!/bin/bash
+
+# Variabile non impostata
+echo "Valore di variabile non impostata: ${variabile:-valore_predefinito}"
+```
+
+**Output:**
+```
+Valore di variabile non impostata: valore_predefinito
+```
+
+### Spiegazione
+
+- `${variabile:-valore_predefinito}`: Se `variabile` non è impostata o è vuota, viene utilizzato `valore_predefinito`.
+
+### Esempio 2: Variabile impostata
+
+```bash
+#!/bin/bash
+
+# Variabile impostata
+variabile="valore_effettivo"
+echo "Valore di variabile impostata: ${variabile:-valore_predefinito}"
+```
+
+**Output:**
+```
+Valore di variabile impostata: valore_effettivo
+```
+
+### Spiegazione
+
+- In questo caso, poiché `variabile` è impostata con un valore, viene utilizzato `valore_effettivo` invece di `valore_predefinito`.
+
+### Utilizzo pratico
+
+L'espansione con valori predefiniti è utile in script dove vuoi garantire che una variabile abbia sempre un valore valido, anche se non è stata impostata dall'utente o da un altro processo.
+
+### Note
+
+- Puoi utilizzare questa tecnica per impostare valori di default per variabili di configurazione, argomenti di script, o qualsiasi altra situazione in cui un valore predefinito è desiderabile.
+- È una pratica comune negli script di shell per migliorare la robustezza e la manutenibilità del codice.
+
+--- 
 ## Esempi pratici
 
 Vediamo ora un esempio completo che utilizza diversi tipi di variabili per calcolare il costo totale di un acquisto:
@@ -269,5 +371,3 @@ La sintassi `${nome:-valore_default}` restituisce il valore della variabile se �
 5. Crea uno script che utilizzi variabili readonly per memorizzare informazioni di configurazione (come percorsi di file o nomi di utenti) e poi le utilizzi per eseguire operazioni di base sul sistema.
 
 ---
-
-Nel prossimo paragrafo, esploreremo come interagire con l'ambiente di sistema attraverso l'uso delle variabili d'ambiente, fondamentali per creare script che si comportano in modo diverso a seconda del contesto in cui vengono eseguiti.
