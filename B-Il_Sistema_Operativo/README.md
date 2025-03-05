@@ -7,7 +7,8 @@
 - [Parametri posizionali e argomenti da riga di comando](<Parametri posizionali e argomenti da riga di comando.md>)
 - [Espansione aritmetica](<Espansione aritmetica2.md>)
 
-- [Shell_Windows](<Shell_Windows/README.md>)
+- [PowerShell Windows](<PowerShell/README.md>)
+- [DOS](<DOS/README.md>)
 
 ---
 
