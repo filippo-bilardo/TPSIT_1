@@ -218,6 +218,77 @@ L'espansione indiretta è utile in scenari in cui devi lavorare con variabili di
 - L'espansione indiretta richiede che la variabile di riferimento (`saluto` nell'esempio) sia già definita nel contesto in cui viene utilizzata.
 - È una funzionalità avanzata e può essere utile in script complessi dove la flessibilità nell'accesso alle variabili è necessaria.
 
+
+
+### Esempio con variabili `a1`, `a2`, `a3`, ...
+
+Supponiamo di avere una serie di variabili denominate `a1`, `a2`, `a3`, ecc., e vogliamo accedere ai loro valori utilizzando un ciclo.
+
+```bash
+#!/bin/bash
+
+# Dichiarazione delle variabili
+a1="Valore 1"
+a2="Valore 2"
+a3="Valore 3"
+
+# Utilizzo di un ciclo per accedere alle variabili a1, a2, a3
+for i in {1..3}
+do
+  # Espansione indiretta per ottenere il valore di a1, a2, a3
+  valore=${!a$i}
+  echo "Valore di a$i: $valore"
+done
+```
+
+**Output:**
+```
+Valore di a1: Valore 1
+Valore di a2: Valore 2
+Valore di a3: Valore 3
+```
+
+### Spiegazione
+
+- `a1="Valore 1"`, `a2="Valore 2"`, `a3="Valore 3"`: Variabili con valori assegnati.
+- `for i in {1..3}`: Un ciclo che itera sui numeri da 1 a 3.
+- `${!a$i}`: Espansione indiretta per ottenere il valore della variabile `a1`, `a2`, `a3`, ecc., dove `i` è il numero corrente del ciclo.
+
+### Esempio con argomenti di script `$1`, `$2`, ...
+
+Se vuoi accedere agli argomenti passati a uno script in modo dinamico, puoi fare qualcosa di simile:
+
+```bash
+#!/bin/bash
+
+# Supponiamo che lo script sia chiamato con: ./script.sh arg1 arg2 arg3
+
+# Utilizzo di un ciclo per accedere agli argomenti $1, $2, $3
+for i in {1..3}
+do
+  # Espansione indiretta per ottenere il valore dell'argomento $1, $2, $3
+  arg_valore=${!i}
+  echo "Valore di \$$i: $arg_valore"
+done
+```
+
+**Output (se lo script è chiamato con `./script.sh arg1 arg2 arg3`):**
+```
+Valore di $1: arg1
+Valore di $2: arg2
+Valore di $3: arg3
+```
+
+### Spiegazione
+
+- `for i in {1..3}`: Un ciclo che itera sui numeri da 1 a 3.
+- `${!i}`: Espansione indiretta per ottenere il valore dell'argomento `$1`, `$2`, `$3`, ecc., dove `i` è il numero corrente del ciclo.
+
+### Note
+
+- L'espansione indiretta è molto potente per lavorare con variabili dinamiche e argomenti di script.
+- Assicurati che le variabili o gli argomenti a cui fai riferimento siano definiti nel contesto in cui vengono utilizzati.
+
 ---
 
 ## Espansione con valori predefiniti
