@@ -210,15 +210,23 @@ Bash fornisce diverse variabili speciali per accedere a informazioni sul process
 
 ### Variabili relative allo script
 
-- `$0`: Nome dello script
-- `$1`, `$2`, ...: Parametri posizionali (argomenti passati allo script)
-- `$#`: Numero di parametri posizionali
-- `$@`: Tutti i parametri posizionali (come parole separate)
-- `$*`: Tutti i parametri posizionali (come una singola parola)
-- `$?`: Codice di uscita dell'ultimo comando eseguito
-- `$$`: PID (Process ID) del processo shell corrente
-- `$!`: PID dell'ultimo processo in background
-- `$_`: Ultimo argomento del comando precedente
+- `$0`: Nome dello script o della shell. Quando usato in uno script, contiene il percorso con cui lo script è stato invocato.
+
+- `$1`, `$2`, ...: Parametri posizionali (argomenti passati allo script). `$1` è il primo argomento, `$2` è il secondo, e così via. Sono accessibili fino a `$9` direttamente; per accedere a parametri con indice superiore a 9, è necessario usare le parentesi graffe: `${10}`, `${11}`, ecc.
+
+- `$#`: Numero di parametri posizionali passati allo script o alla funzione. Utile per verificare se sono stati forniti abbastanza argomenti.
+
+- `$@`: Tutti i parametri posizionali come parole separate. Quando racchiuso tra virgolette doppie ("$@"), ogni parametro viene espanso come una parola separata, preservando eventuali spazi all'interno dei singoli argomenti.
+
+- `$*`: Tutti i parametri posizionali come una singola parola. Quando racchiuso tra virgolette doppie ("$*"), tutti i parametri vengono uniti in una singola stringa, separati dal primo carattere della variabile IFS (di default uno spazio).
+
+- `$?`: Codice di uscita dell'ultimo comando eseguito. Un valore di 0 indica successo, mentre qualsiasi altro valore indica un errore. Molto utile per verificare se un comando è stato eseguito correttamente.
+
+- `$$`: PID (Process ID) del processo shell corrente. Spesso utilizzato per creare nomi di file temporanei unici.
+
+- `$!`: PID dell'ultimo processo avviato in background (con &). Utile per monitorare o terminare processi in background.
+
+- `$_`: Ultimo argomento del comando precedente. Contiene l'ultimo argomento dell'ultimo comando eseguito.
 
 Esempio di utilizzo:
 
