@@ -1,4 +1,4 @@
-# Guida Dettagliata al Comando IF
+# Guida al Comando IF
 
 Il comando `IF` è uno degli strumenti più potenti negli script batch di Windows, permettendo di eseguire operazioni condizionali. Questa guida esplora tutte le sue funzionalità e utilizzi.
 

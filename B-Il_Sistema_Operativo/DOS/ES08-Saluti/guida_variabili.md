@@ -1,4 +1,4 @@
-# Guida Dettagliata alle Variabili in Batch
+# Guida alle Variabili in Batch
 
 Le variabili sono elementi fondamentali negli script batch di Windows, permettendo di memorizzare e manipolare dati. Questa guida esplora tutte le funzionalità e gli utilizzi delle variabili.
 
