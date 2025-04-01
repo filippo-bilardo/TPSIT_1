@@ -5,7 +5,6 @@
 - [03 Gestione dei file e delle directory](<03 Gestione dei file e delle directory.md>)
 - [04 Comandi di sistema e amministrazione](<04 Comandi di sistema e amministrazione.md>)
 - [05.1 Introduzione agli script batch](<05.1 Introduzione agli script batch.md>)
-- [05.1 Introduzione agli script batch](<05.1 Introduzione agli script batch.md>)
 - [05.2 Sintassi di base e struttura degli script](<05.2 Sintassi di base e struttura degli script.md>)
 - [05.3 Variabili e parametri negli script batch](<05.3 Variabili e parametri negli script batch.md>)
 - [05.4 Controllo del flusso (if, for, goto, etc.)](<05.4 Controllo del flusso.md>)
@@ -14,5 +13,6 @@
 - [06 Automazione e pianificazione dei task](<06 Automazione e pianificazione dei task.md>)
 - [07 Risoluzione dei problemi con il Prompt dei comandi](<07 Risoluzione dei problemi con il Prompt dei comandi.md>)
 - [08 Comandi avanzati e personalizzazione](<08 Comandi avanzati e personalizzazione.md>)
+- [09 Glossario](<09 Glossario.md>)
 
 ---
