@@ -1,4 +1,4 @@
-### Capitolo 5: Automazione e pianificazione dei task
+### Capitolo 6: Automazione e pianificazione dei task
 
 L'automazione e la pianificazione dei task sono fondamentali per migliorare l'efficienza e ridurre il carico di lavoro manuale. Questo capitolo esplora come utilizzare Task Scheduler per automatizzare i comandi e gestire i task pianificati sui sistemi Windows.
 

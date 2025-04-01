@@ -1,4 +1,4 @@
-### Capitolo 7: Comandi avanzati e personalizzazione
+### Capitolo 8: Comandi avanzati e personalizzazione
 
 Questo capitolo esplora l'uso di strumenti avanzati e tecniche di personalizzazione per migliorare l'efficienza e la potenza del Prompt dei comandi. Scoprirai come utilizzare PowerShell per eseguire comandi avanzati, personalizzare il Prompt dei comandi e integrare strumenti di terze parti per estendere le funzionalità.
 

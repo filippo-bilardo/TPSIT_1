@@ -1,4 +1,4 @@
-### Capitolo 6: Risoluzione dei problemi con il Prompt dei comandi
+### Capitolo 7: Risoluzione dei problemi con il Prompt dei comandi
 
 Il Prompt dei comandi è uno strumento potente per la diagnostica e la risoluzione dei problemi di sistema. Questo capitolo esplora i comandi e le tecniche utilizzati per identificare e risolvere problemi comuni sui sistemi Windows.
 
