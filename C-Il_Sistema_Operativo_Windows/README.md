@@ -1,5 +1,9 @@
 ## "Guida completa al Prompt dei comandi Windows"
 
+Questa guida fornisce una panoramica completa del Prompt dei comandi Windows, dagli aspetti fondamentali alle tecniche avanzate di scripting e automazione.
+
+### Contenuti
+
 - [01 Introduzione](<01 Introduzione.md>)
 - [02 Fondamenti del Prompt dei comandi](<02 Fondamenti del Prompt dei comandi.md>)
 - [03 Gestione dei file e delle directory](<03 Gestione dei file e delle directory.md>)

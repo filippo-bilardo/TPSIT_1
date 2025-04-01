@@ -87,4 +87,32 @@ I comandi di sistema e amministrazione sono essenziali per gestire e mantenere u
 2. Usa `tasklist` per elencare tutti i processi in esecuzione e identifica un processo che puoi terminare in sicurezza con `taskkill`.
 3. Configura un indirizzo IP statico utilizzando `ipconfig` e verifica la connessione con `ping`.
 
-Questi esercizi ti aiuteranno a familiarizzare con i comandi di sistema e amministrazione, migliorando la tua capacità di gestire e mantenere un sistema Windows. Buon lavoro!
+#### Comandi avanzati per l'amministrazione di sistema
+
+- **`diskpart`**: Uno strumento avanzato per la gestione dei dischi.
+  ```batch
+  diskpart
+  list disk
+  select disk 1
+  clean
+  create partition primary
+  format fs=ntfs quick
+  exit
+  ```
+
+- **`schtasks`**: Permette di gestire le attività pianificate da riga di comando.
+  ```batch
+  schtasks /create /tn "Backup Giornaliero" /tr "C:\backup.bat" /sc daily /st 22:00
+  ```
+
+- **`reg`**: Consente di leggere, modificare e confrontare le chiavi di registro.
+  ```batch
+  reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion
+  ```
+
+---
+
+**Navigazione:**
+- [◀ Guida precedente: Gestione dei file e delle directory](<03 Gestione dei file e delle directory.md>)
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Introduzione agli script batch](<05.1 Introduzione agli script batch.md>)

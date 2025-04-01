@@ -34,6 +34,54 @@ Task Scheduler è uno strumento integrato in Windows che consente di pianificare
 - **Documentazione**: Documenta la configurazione e lo scopo di ciascun task per facilitare la manutenzione e la risoluzione dei problemi.
 - **Monitoraggio**: Monitora l'esecuzione dei task per assicurarti che vengano completati correttamente e per rilevare eventuali errori.
 
+#### Comandi avanzati di Task Scheduler da riga di comando
+
+Task Scheduler può essere gestito anche tramite il comando `schtasks` dal prompt dei comandi, offrendo maggiore flessibilità e opzioni di automazione:
+
+- **Creare un nuovo task**:
+  ```batch
+  schtasks /create /tn "Nome Task" /tr "C:\percorso\script.bat" /sc daily /st 22:00 /ru "SISTEMA"
+  ```
+
+- **Eliminare un task esistente**:
+  ```batch
+  schtasks /delete /tn "Nome Task" /f
+  ```
+
+- **Eseguire immediatamente un task**:
+  ```batch
+  schtasks /run /tn "Nome Task"
+  ```
+
+- **Visualizzare tutti i task pianificati**:
+  ```batch
+  schtasks /query /fo LIST /v
+  ```
+
+#### Trigger avanzati per i task pianificati
+
+Oltre ai trigger temporali, Task Scheduler supporta anche trigger basati su eventi:
+
+- **All'avvio del sistema**:
+  ```batch
+  schtasks /create /tn "Startup Task" /tr "C:\percorso\script.bat" /sc onstart
+  ```
+
+- **Al login dell'utente**:
+  ```batch
+  schtasks /create /tn "Login Task" /tr "C:\percorso\script.bat" /sc onlogon
+  ```
+
+- **All'inattività del sistema**:
+  ```batch
+  schtasks /create /tn "Idle Task" /tr "C:\percorso\script.bat" /sc onidle /i 10
+  ```
+
+- **Al verificarsi di un evento specifico**:
+  ```batch
+  schtasks /create /tn "Event Task" /tr "C:\percorso\script.bat" /sc ONEVENT /ec Application /mo "*[System/EventID=1000]"
+  ```
+
 #### Domande di autovalutazione
 
 1. Quale strumento viene utilizzato per pianificare l'esecuzione di script e comandi in Windows?
@@ -63,3 +111,10 @@ Task Scheduler è uno strumento integrato in Windows che consente di pianificare
 5. Configura un task che controlla gli aggiornamenti di sistema ogni domenica e installa gli aggiornamenti disponibili.
 
 Questi esercizi ti aiuteranno a comprendere meglio l'uso di Task Scheduler per automatizzare i task e migliorare l'efficienza del tuo flusso di lavoro. Buon lavoro!
+
+---
+
+**Navigazione:**
+- [◀ Guida precedente: Esercizi pratici](<05.6 Esercizi pratici.md>)
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Risoluzione dei problemi con il Prompt dei comandi](<07 Risoluzione dei problemi con il Prompt dei comandi.md>)

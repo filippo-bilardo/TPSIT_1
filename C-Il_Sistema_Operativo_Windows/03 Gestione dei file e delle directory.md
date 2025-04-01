@@ -93,3 +93,10 @@ La gestione dei file e delle directory è una delle funzioni principali del Prom
 5. Elenca i file nella directory `Testo` e poi cancella il file che hai copiato.
 
 Questi esercizi ti aiuteranno a familiarizzare con la gestione dei file e delle directory nel Prompt dei comandi, migliorando la tua efficienza e competenza. Buon lavoro!
+
+---
+
+**Navigazione:**
+- [◀ Guida precedente: Fondamenti del Prompt dei comandi](<02 Fondamenti del Prompt dei comandi.md>)
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Comandi di sistema e amministrazione](<04 Comandi di sistema e amministrazione.md>)

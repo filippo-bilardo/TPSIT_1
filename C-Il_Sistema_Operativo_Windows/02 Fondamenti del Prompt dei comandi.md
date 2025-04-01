@@ -73,3 +73,19 @@ Ecco alcuni comandi di base che puoi utilizzare nel Prompt dei comandi:
 5. Personalizza il prompt per mostrare solo il simbolo `>`.
 
 Questi esercizi ti aiuteranno a familiarizzare con i comandi di base e a migliorare la tua efficienza nell'uso del Prompt dei comandi. Buon lavoro!
+
+#### Risorse utili per principianti
+
+- **Microsoft Command Line Reference**: Una guida completa ai comandi disponibili nel Prompt dei comandi.
+- **Shortcut da tastiera utili**:
+  - `F7`: Mostra lo storico dei comandi come lista selezionabile
+  - `Alt+F7`: Cancella lo storico dei comandi
+  - `F3`: Ripete l'ultimo comando
+  - `Tab`: Completa automaticamente nomi di file e cartelle
+
+---
+
+**Navigazione:**
+- [◀ Guida precedente: Introduzione](<01 Introduzione.md>)
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Gestione dei file e delle directory](<03 Gestione dei file e delle directory.md>)

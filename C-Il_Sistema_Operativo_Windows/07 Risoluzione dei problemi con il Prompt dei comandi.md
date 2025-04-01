@@ -55,6 +55,84 @@ Il Prompt dei comandi è uno strumento potente per la diagnostica e la risoluzio
   SYSTEMINFO > report_sistema.txt
   ```
 
+#### Tool di diagnostica avanzati
+
+Windows include diversi strumenti di diagnostica avanzata che possono essere eseguiti dal Prompt dei comandi:
+
+- **Memory Diagnostic Tool**:
+  ```batch
+  mdsched
+  ```
+
+- **DirectX Diagnostic Tool**:
+  ```batch
+  dxdiag
+  ```
+
+- **Resource Monitor**:
+  ```batch
+  resmon
+  ```
+
+- **Performance Monitor**:
+  ```batch
+  perfmon
+  ```
+
+#### Risoluzione dei problemi di avvio
+
+Se Windows non si avvia normalmente, è possibile utilizzare il Prompt dei comandi da una console di ripristino:
+
+- **Riparazione del boot record**:
+  ```batch
+  bootrec /rebuildbcd
+  bootrec /fixmbr
+  bootrec /fixboot
+  ```
+
+- **Ripristino di Windows Update**:
+  ```batch
+  net stop wuauserv
+  net stop cryptSvc
+  net stop bits
+  net stop msiserver
+  ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
+  ren C:\Windows\System32\catroot2 catroot2.old
+  net start wuauserv
+  net start cryptSvc
+  net start bits
+  net start msiserver
+  ```
+
+#### Script per la raccolta di informazioni diagnostiche
+
+```batch
+@echo off
+SET reportfile=C:\diagnostics_%computername%_%date:~-4%-%date:~7,2%-%date:~4,2%.txt
+
+ECHO Creazione del report diagnostico in %reportfile%
+ECHO ========== INFORMAZIONI DI SISTEMA ========== > %reportfile%
+systeminfo >> %reportfile%
+
+ECHO ========== SERVIZI IN ESECUZIONE ========== >> %reportfile%
+net start >> %reportfile%
+
+ECHO ========== CONNESSIONI DI RETE ========== >> %reportfile%
+ipconfig /all >> %reportfile%
+netstat -an >> %reportfile%
+
+ECHO ========== TABELLA DI ROUTING ========== >> %reportfile%
+route print >> %reportfile%
+
+ECHO ========== PROCESSI IN ESECUZIONE ========== >> %reportfile%
+tasklist /v >> %reportfile%
+
+ECHO ========== DRIVER INSTALLATI ========== >> %reportfile%
+driverquery >> %reportfile%
+
+ECHO Report diagnostico completato.
+```
+
 #### Esempi di risoluzione dei problemi comuni
 
 1. **File di sistema corrotti**: Esegui `sfc /scannow` per riparare i file di sistema corrotti.
@@ -96,3 +174,10 @@ Il Prompt dei comandi è uno strumento potente per la diagnostica e la risoluzio
 5. Genera un report di sistema completo utilizzando `systeminfo`.
 
 Questi esercizi ti aiuteranno a migliorare le tue competenze nella risoluzione dei problemi utilizzando il Prompt dei comandi, rendendoti più sicuro nell'affrontare e risolvere problemi comuni sui sistemi Windows. Buon lavoro!
+
+---
+
+**Navigazione:**
+- [◀ Guida precedente: Automazione e pianificazione dei task](<06 Automazione e pianificazione dei task.md>)
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Comandi avanzati e personalizzazione](<08 Comandi avanzati e personalizzazione.md>)

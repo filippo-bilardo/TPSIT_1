@@ -34,11 +34,70 @@ Windows PowerShell è un potente strumento a riga di comando e un linguaggio di 
   - `0`: Sfondo nero.
   - `A`: Testo verde chiaro.
 
+#### Gestione del prompt di PowerShell con profili
+
+PowerShell permette di personalizzare il proprio ambiente attraverso l'uso dei profili:
+
+```powershell
+# Creare un nuovo profilo PowerShell se non esiste
+if (!(Test-Path -Path $PROFILE)) {
+    New-Item -ItemType File -Path $PROFILE -Force
+}
+
+# Modificare il profilo con Notepad
+notepad $PROFILE
+```
+
+Esempio di contenuto del profilo:
+
+```powershell
+# Personalizzazione del prompt
+function prompt {
+    $currentDir = (Get-Location).Path
+    $time = Get-Date -Format "HH:mm:ss"
+    $prompt = "[$time] "
+    $prompt += "PS $currentDir> "
+    return $prompt
+}
+
+# Alias personalizzati
+Set-Alias -Name ll -Value Get-ChildItem
+Set-Alias -Name gs -Value git-status
+
+# Funzioni di utilità
+function git-status { git status }
+function admin { Start-Process powershell -Verb RunAs }
+```
+
 #### Estensione delle funzionalità con strumenti di terze parti
 
 - **Strumenti di terze parti**: Esistono numerosi strumenti che possono essere integrati con il Prompt dei comandi per estendere le sue funzionalità, come `Cygwin` per un ambiente Unix-like o `Git Bash` per l'uso di Git.
 
 - **Plugin e script**: Puoi scaricare e utilizzare script e plugin creati dalla community per automatizzare compiti specifici.
+
+#### Integrazione tra PowerShell e CMD
+
+È possibile eseguire comandi CMD da PowerShell e viceversa:
+
+- **Eseguire comandi CMD da PowerShell**:
+  ```powershell
+  cmd /c "dir /b"
+  ```
+
+- **Eseguire comandi PowerShell da CMD**:
+  ```batch
+  powershell -Command "Get-Process | Where-Object { $_.CPU -gt 100 }"
+  ```
+
+#### Personalizzazione avanzata di ConEmu/Cmder
+
+[ConEmu](https://conemu.github.io/) e [Cmder](https://cmder.net/) sono applicazioni console avanzate che offrono un'esperienza migliorata rispetto al prompt dei comandi standard di Windows:
+
+- Multiple schede e split-screen
+- Supporto per temi e colori personalizzati
+- Integrazione con Git e altri strumenti
+- Shortcut personalizzabili
+- Support per vari shell (CMD, PowerShell, Bash, ecc.)
 
 #### Esempi di utilizzo avanzato
 
@@ -89,3 +148,10 @@ Windows PowerShell è un potente strumento a riga di comando e un linguaggio di 
 5. Scrivi uno script PowerShell che monitora l'utilizzo della CPU e invia un avviso se supera una soglia specificata.
 
 Questi esercizi ti aiuteranno a esplorare le funzionalità avanzate del Prompt dei comandi e di PowerShell, migliorando la tua capacità di gestire e automatizzare compiti complessi sui sistemi Windows. Buon lavoro!
+
+---
+
+**Navigazione:**
+- [◀ Guida precedente: Risoluzione dei problemi con il Prompt dei comandi](<07 Risoluzione dei problemi con il Prompt dei comandi.md>)
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Glossario](<09 Glossario.md>)

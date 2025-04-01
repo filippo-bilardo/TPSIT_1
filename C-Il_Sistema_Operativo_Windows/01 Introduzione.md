@@ -1,4 +1,3 @@
-
 #### Benvenuto nel Prompt dei comandi
 
 Benvenuti nella "Guida completa al Prompt dei comandi Windows"! Questo libro è progettato per accompagnarti in un viaggio alla scoperta di uno degli strumenti più potenti e versatili disponibili sui sistemi operativi Windows: il Prompt dei comandi. Che tu sia un utente esperto che desidera affinare le proprie competenze, un professionista IT alla ricerca di soluzioni efficienti per la gestione dei sistemi, o semplicemente un appassionato di tecnologia curioso di esplorare nuove possibilità, questo libro ti fornirà le conoscenze e le abilità necessarie per padroneggiare il Prompt dei comandi.
@@ -45,6 +44,20 @@ L'evoluzione del DOS (Disk Operating System) è una storia affascinante che rifl
 - **Alternative moderne**: Oggi, strumenti come Windows PowerShell e Windows Terminal offrono funzionalità avanzate che estendono le capacità del Prompt dei comandi tradizionale. Questi strumenti moderni integrano le funzionalità di MS-DOS con le esigenze contemporanee degli utenti avanzati e dei professionisti IT.
 
 In sintesi, l'evoluzione del DOS riflette la transizione dell'informatica personale da un'interfaccia a riga di comando a un ambiente grafico più intuitivo. Nonostante i cambiamenti, l'eredità di MS-DOS continua a influenzare il modo in cui interagiamo con i nostri computer oggi.
+
+#### Risorse aggiuntive
+
+Per approfondire ulteriormente la storia e l'evoluzione del Prompt dei comandi e del DOS, ecco alcune risorse consigliate:
+
+- Microsoft Docs: [Command-line reference A-Z](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+- Computer History Museum: [The MS-DOS (Microsoft Disk Operating System) was created for IBM](https://www.computerhistory.org/tdih/august/12/1981/)
+- Enciclopedia Microsoft: [Storia di Windows](https://www.microsoft.com/it-it/windows/windows-history)
+
+---
+
+**Navigazione:**
+- [🔼 Indice](<README.md>)
+- [▶ Guida successiva: Fondamenti del Prompt dei comandi](<02 Fondamenti del Prompt dei comandi.md>)
 
 ---
 
