@@ -1,6 +1,6 @@
-# Guida allo scripting con Bash - Indice
+# Guida allo scripting Linux con Bash
 
-Benvenuti alla guida completa allo scripting con Bash! Questo indice vi aiuterà a navigare tra i vari capitoli della guida.
+Benvenuti alla guida completa allo scripting Linux con Bash! Di seguito i vari capitoli della guida con i link.
 
 ## Parte I: Fondamenti
 
