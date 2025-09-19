@@ -6,6 +6,8 @@ Appunti ed esempi per corso TPSIT1 (classi terze)
 - [A-Rappresentazione_delle_informazioni](A-Rappresentazione_delle_informazioni/README.md)
 - [B-Il_Sistema_Operativo_Linux](B-Il_Sistema_Operativo_Linux/README.md) 
 - [C-Il_Sistema_Operativo_Windows](C-Il_Sistema_Operativo_Windows/README.md)
+- [C - Web development (html,css)](C-Web_Development_(html,css)/README.md)
+
 ---
 ## Corsi collegati
 - [TPSIT_1](https://github.com/filippo-bilardo/TPSIT_1)

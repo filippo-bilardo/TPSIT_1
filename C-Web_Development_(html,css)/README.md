@@ -1,4 +1,4 @@
-## G - Web Development (html, css)
+## C - Web Development (html, css)
 
 ---
 ## Teoria
