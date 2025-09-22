@@ -1,4 +1,0 @@
-Nome,Cognome,Età,Città
-Mario,Rossi,35,Roma
-Luca,Bianchi,28,Napoli
-Anna,Verdi,42,Milano

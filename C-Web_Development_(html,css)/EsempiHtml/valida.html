@@ -1,0 +1,90 @@
+<html>
+<head>
+<script>
+function controlla() 
+{
+   //Verifica immissione dati di cognome, nome, codice
+   if (document.modulo.cognome.value=="") 
+   {
+      alert("Inserire cognome");
+      return false;
+   }
+   if (document.modulo.nome.value=="") 
+   {
+      alert("Inserire nome");
+      return false;
+   }
+   if (document.modulo.cod.value=="") 
+   {
+      alert("Inserire matricola");
+      return false;
+   }
+   //Verifica se codice è numerico
+   var codice=parseInt(document.modulo.cod.value);
+   if (isNaN(codice)) 
+   {
+      alert("Il codice deve essere numerico");
+      return false;
+   }
+   //Verifica se regione è stata selezionata
+   if (document.modulo.regione.value=="nessuna") 
+   {
+      alert("Selezionare una regione");
+      return false;
+   }
+   //Verifica se email e telefono sono stati inseriti
+   if ((document.modulo.email.value=="")&&(document.modulo.tel.value=="")) 
+   {
+      alert("Inserire o l'email o il numero di telefono");
+      return false;
+   }
+   //Se dati corretti la funzione di callback restituisce true
+   alert("Dati inseriti correttamente");
+   return true;
+}
+</script>
+</head>
+<body>
+<form action="" method="post" name="modulo" onSubmit="return controlla();">
+<table border=0><tr><td>Cognome:
+<td><input type="text" name="cognome">
+<tr><td>Nome:
+<td><input type="text" name="nome">
+<tr><td>Codice iscrizione:
+<td><input type="text" name="cod">
+<tr><td>Email:
+<td><input type="text" name="email">
+<tr><td>Regione appartenenza:
+<td><select name="regione">
+<option value="nessuna" selected></option>
+<option value="valdaosta">Val d'Aosta</option>
+<option value="piemonte">Piemonte</option>
+<option value="liguria">Liguria</option>
+<option value="lombardia">Lombardia</option>
+<option value="veneto">Veneto</option>
+<option value="trentino">Trentino Alto Adige</option>
+<option value="friuli">Friuli Venezia-Giulia</option>
+<option value="emilia">Emilia-Romagna</option>
+<option value="toscana">Toscana</option>
+<option value="marche">Marche</option>
+<option value="umbria">Umbria</option>
+<option value="lazio">Lazio</option>
+<option value="abruzzo">Abruzzo</option>
+<option value="molise">Molise</option>
+<option value="campania">Campania</option>
+<option value="basilicata">Basilicata</option>
+<option value="puglia">Puglia</option>
+<option value="calabria">Calabria</option>
+<option value="sicilia">Sicilia</option>
+<option value="sardegna">Sardegna</option>
+</select>
+<tr><td>Telefono:
+<td><input type="text" name="tel">
+<tr><td colspan=2>Allergie alimentari:
+<tr><td colspan=2>
+<textarea name="allergie" cols="40" rows="4"></textarea>
+<tr><td><input type="submit" value="Invia">
+<td><input type="reset" value="Reset"></table>
+</form>
+</body>
+</html>

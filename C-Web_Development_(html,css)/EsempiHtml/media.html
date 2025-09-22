@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Calcolo media di tre numeri</title>
+</head>
+<body>
+<h3>Calcolo della media aritmetica di tre numeri:</h3>
+<hr>
+<div id="risultato"></div>
+<script type="text/javascript">
+var numero=0;   
+var totale=0;     
+var media=0;
+numero=eval(window.prompt("Inserisci il primo numero"));
+//legge il primo dato, lo tratta come numero e lo memorizza nella variabile numero*/  
+totale+=numero;
+// incrementa la somma del numero 
+numero=eval(window.prompt("Inserisci il secondo numero"));
+//legge il secondo dato, lo tratta come numero e lo memorizza nella variabile numero*/  
+totale+=numero;
+// incrementa la somma del numero
+numero=eval(window.prompt("Inserisci il terzo numero"));
+// legge il terzo dato, lo tratta come numero e lo memorizza nella variabile numero*/  
+totale+=numero;
+// calcola la media dei tre numeri 
+media=totale/3;
+// visualizza il risultato
+document.getElementById("risultato").innerHTML="La media è:"+media+"<br>";
+</script>
+</body>
+</html>

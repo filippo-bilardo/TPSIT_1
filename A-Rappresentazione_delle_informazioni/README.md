@@ -1,4 +1,4 @@
-## A-Rappresentazione_delle_informazioni
+## A - Rappresentazione delle informazioni
 
 ---
 [INDICE](<../README.md>)

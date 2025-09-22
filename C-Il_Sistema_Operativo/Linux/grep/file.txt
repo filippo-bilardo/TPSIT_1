@@ -1,8 +1,0 @@
-abc123
-def456
-foo
-foobar
-aa09876aa
-123
-4567
-bar
